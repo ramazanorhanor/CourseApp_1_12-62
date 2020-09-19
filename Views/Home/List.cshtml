@@ -1,0 +1,40 @@
+﻿@*bize gelen veri liste bu yüzden @IEnumerable yada @IQueryable kullanmalıyız*@
+@model IEnumerable<CourseApp.Models.Request>
+
+
+@{
+    ViewData["Title"] = "List";
+}
+<div class="m-5">
+    <div class="bg-success text-white m-5 p-4">
+        Request List
+    </div>
+    <div class="table-responsive">
+
+        <table class="table table-bordered table striped p-4">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th>@item.Id</th>
+                        <th>@item.Name</th>
+                        <th>@item.Email</th>
+                        <th>@item.Phone</th>
+                        <th>@item.Message</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+

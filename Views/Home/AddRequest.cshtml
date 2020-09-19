@@ -1,0 +1,35 @@
+﻿@model CourseApp.Models.Request
+@{
+    ViewData["Title"] = "AddRequest";
+}
+
+@*https://getbootstrap.com/docs/4.1/components/forms/*@
+
+<div class="bg-success text-white m-5 p-4">
+    Create a Request
+</div>
+
+<form asp-action="AddRequest" method="post" class="m-5">
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Mail</label>
+        <input asp-for="Email"   class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Phone</label>
+        <input asp-for="Phone" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+        <input asp-for="Message" class="form-control">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
